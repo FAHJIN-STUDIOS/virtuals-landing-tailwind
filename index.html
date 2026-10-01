@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtuals | Virtual Build Tools for Developers</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["'Gill Sans'", "'Gill Sans MT'", "Calibri", "'Trebuchet MS'", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="/September/Week 4 project/style.css">
+</head>
+
+<body class="bg-[#191919] font-sans">
+    <main>
+
+        <!-- ===================== HEADER (Tailwind) ===================== -->
+        <header class="fixed top-0 inset-x-0 z-50 flex items-center justify-between
+                       px-5 py-1.5 lg:px-[60px] lg:py-5
+                       bg-[#1e1e21] border-b-2 border-white">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-0.5 text-xl text-white">
+                <img src="assets/logo.png" alt="Virtuals logo" width="35" height="35">
+                <p>Virtuals</p>
+            </a>
+
+            <!-- Nav: hidden on small screens, flex from lg (1024px) up -->
+            <nav class="hidden lg:flex gap-6 text-xl text-white">
+                <a href="#features" class="hover:text-orange-500">Features</a>
+                <a href="#workflow" class="hover:text-orange-500">Workflow</a>
+                <a href="#pricing" class="hover:text-orange-500">Pricing</a>
+                <a href="#testimonials" class="hover:text-orange-500">Testimonials</a>
+            </nav>
+
+            <!-- Header buttons: large screens only -->
+            <div class="hidden lg:flex gap-[50px]">
+                <button class="bg-[#1e1e21] text-white text-base p-2.5 rounded-lg border border-white">
+                    Sign in
+                </button>
+                <button class="bg-[#C24225] text-white text-sm p-2.5 rounded-lg">
+                    Create an account
+                </button>
+            </div>
+
+            <!-- Hamburger icon: below lg only -->
+            <button class="lg:hidden text-white" aria-label="Open menu">
+                <svg class="w-[30px] h-[30px]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </header>
+
+        <!-- ===================== HERO (Tailwind) ===================== -->
+        <section class="flex flex-col items-center px-5 pt-28 lg:pt-[120px]">
+
+            <h1 class="flex flex-wrap justify-center gap-x-[18px] text-center
+                       text-[42px] leading-tight lg:text-[75px] font-normal text-white">
+                <span>Virtual Build tools</span>
+                <span class="text-[#F97316]">for developers</span>
+            </h1>
+
+            <div class="mt-[22px] flex flex-col gap-[7px] text-center text-lg text-[#9CA3AF]">
+                <p>Empower your creativity and bring your VR app ideas to life with our intuitive development tools</p>
+                <p>Get started today and turn your imagination into immersive reality!</p>
+            </div>
+
+            <div class="mt-[25px] flex justify-center gap-5 px-1.5 py-3">
+                <button class="bg-[#c24225] text-white text-base px-2.5 py-[15px] rounded-lg">
+                    Start for free
+                </button>
+                <button class="bg-[#191919] text-white text-base px-2.5 py-[15px] rounded-lg border border-white">
+                    Documentation
+                </button>
+            </div>
+
+            <div class="mt-[60px] flex flex-col lg:flex-row justify-center items-center gap-5 w-full">
+                <video class="w-full max-w-[550px] rounded-[10px] border-2 border-[#c24225]"
+                       autoplay muted loop playsinline>
+                    <source src="assets/video1.mp4" type="video/mp4">
+                </video>
+                <video class="w-full max-w-[550px] rounded-[10px] border-2 border-[#c24225]"
+                       autoplay muted loop playsinline>
+                    <source src="assets/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- ===================== FEATURES (still style.css) ===================== -->
+        <section id="features" class="scroll-mt-24">
+            <button class="feature">FEATURE</button>
+            <p class="heading2">Easily build your code</p>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="5 9 2 12 5 15"></polyline>
+                            <polyline points="9 5 12 2 15 5"></polyline>
+                            <polyline points="15 19 12 22 9 19"></polyline>
+                            <polyline points="19 9 22 12 19 15"></polyline>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                        </svg>
+                    </span>
+                    <p class="feature-title">Drag-and-Drop Interface</p>
+                    <p class="feature-desc">Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2.5" y="4" width="14" height="10" rx="1.5"></rect>
+                            <line x1="6.5" y1="18" x2="12.5" y2="18"></line>
+                            <line x1="9.5" y1="14" x2="9.5" y2="18"></line>
+                            <rect x="15.5" y="9" width="6" height="10" rx="1.2"></rect>
+                        </svg>
+                    </span>
+                    <p class="feature-title">Multi-Platform Compatibility</p>
+                    <p class="feature-desc">Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and standalone headsets.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                        </svg>
+                    </span>
+                    <p class="feature-title">Built-in Templates</p>
+                    <p class="feature-desc">Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </span>
+                    <p class="feature-title">Real-Time Preview</p>
+                    <p class="feature-desc">Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3l1.9 4.9L19 9.8l-4.9 1.9L12 17l-1.9-5.3L5 9.8l5.1-1.9L12 3z"></path>
+                            <path d="M19 15l.8 2.1L22 18l-2.1.8L19 21l-.8-2.1L16 18l2.1-.8L19 15z"></path>
+                        </svg>
+                    </span>
+                    <p class="feature-title">AI Code Assist</p>
+                    <p class="feature-desc">Get smart, context-aware suggestions as you build, so you spend less time debugging and more time creating.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="20" x2="4" y2="10"></line>
+                            <line x1="10" y1="20" x2="10" y2="4"></line>
+                            <line x1="16" y1="20" x2="16" y2="14"></line>
+                            <line x1="21" y1="20" x2="21" y2="8"></line>
+                        </svg>
+                    </span>
+                    <p class="feature-title">Analytics Dashboard</p>
+                    <p class="feature-desc">Gain valuable insights into user interactions and behavior within your VR applications.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== WORKFLOW (still style.css) ===================== -->
+        <section class="workflow-section scroll-mt-24" id="workflow">
+            <p class="heading2">Accelerate your coding workflow</p>
+
+            <div class="workflow-body">
+                <div class="workflow-media">
+                    <img class="shot-front" src="assets/code.jpg" alt="Code editor screenshot">
+                </div>
+
+                <ul class="workflow-list">
+                    <li>
+                        <span class="check-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="8 12 11 15 16 9"></polyline>
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="workflow-title">Code merge made easy</p>
+                            <p class="workflow-desc">Resolve conflicts and merge branches with a visual diff tool built right into the editor.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="8 12 11 15 16 9"></polyline>
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="workflow-title">Instant collaboration</p>
+                            <p class="workflow-desc">Share a live session and code together in real time, no matter where your team is.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="8 12 11 15 16 9"></polyline>
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="workflow-title">AI assistance to reduce time</p>
+                            <p class="workflow-desc">Get context-aware suggestions that speed up repetitive tasks and catch bugs before you ship.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="8 12 11 15 16 9"></polyline>
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="workflow-title">Share work in minutes</p>
+                            <p class="workflow-desc">Export a shareable build or link with one click so teammates and testers can try it instantly.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== PRICING (still style.css) ===================== -->
+        <section class="pricing-section scroll-mt-24" id="pricing">
+            <p class="heading2">Pricing</p>
+
+            <div class="pricing-grid">
+
+                <div class="price-card">
+                    <p class="plan-name">Free</p>
+                    <p class="plan-price">$0 <span>/month</span></p>
+                    <ul class="plan-features">
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Private board sharing</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Unlimited projects</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Community support</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>1 GB cloud storage</li>
+                    </ul>
+                    <button class="subscribe-btn" type="button">Subscribe</button>
+                </div>
+
+                <div class="price-card">
+                    <p class="plan-name">Free</p>
+                    <p class="plan-price">$0 <span>/month</span></p>
+                    <ul class="plan-features">
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Private board sharing</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Unlimited projects</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Community support</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>1 GB cloud storage</li>
+                    </ul>
+                    <button class="subscribe-btn" type="button">Subscribe</button>
+                </div>
+
+                <div class="price-card">
+                    <p class="plan-name">Free</p>
+                    <p class="plan-price">$0 <span>/month</span></p>
+                    <ul class="plan-features">
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Private board sharing</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Unlimited projects</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>Community support</li>
+                        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg></span>1 GB cloud storage</li>
+                    </ul>
+                    <button class="subscribe-btn" type="button">Subscribe</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== TESTIMONIALS (still style.css) ===================== -->
+        <section class="testimonials-section scroll-mt-24" id="testimonials">
+            <p class="heading2">What are people saying</p>
+
+            <div class="testimonials-grid">
+
+                <div class="testimonial-column">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.</p>
+                        <div class="testimonial-author">
+                            <img src="assets/profile-pictures/user1.jpg" alt="John Doe">
+                            <div>
+                                <p class="author-name">John Doe</p>
+                                <p class="author-role">Senior Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible.</p>
+                        <div class="testimonial-author">
+                            <img src="assets/profile-pictures/user2.jpg" alt="Sarah Lee">
+                            <div>
+                                <p class="author-name">Sarah Lee</p>
+                                <p class="author-role">Product Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-column">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life.</p>
+                        <div class="testimonial-author">
+                            <img src="assets/profile-pictures/user3.jpg" alt="Jane Smith">
+                            <div>
+                                <p class="author-name">Jane Smith</p>
+                                <p class="author-role">UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible.</p>
+                        <div class="testimonial-author">
+                            <img src="assets/profile-pictures/user4.jpg" alt="David Kim">
+                            <div>
+                                <p class="author-name">David Kim</p>
+                                <p class="author-role">Engineering Lead</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-column">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.</p>
+                        <div class="testimonial-author">
+                            <img src="assets/profile-pictures/user5.jpg" alt="Mark Johnson">
+                            <div>
+                                <p class="author-name">Mark Johnson</p>
+                                <p class="author-role">Startup Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.</p>
+                        <div class="testimonial-author">
+                            <img src="assets/profile-pictures/user6.jpg" alt="Emily Davis">
+                            <div>
+                                <p class="author-name">Emily Davis</p>
+                                <p class="author-role">Marketing Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== FOOTER (still style.css) ===================== -->
+        <footer>
+            <hr/>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <p class="footer-heading">Resources</p>
+                    <a href="#">Getting Started</a>
+                    <a href="#">Documentation</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Community Forums</a>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-heading">Platform</p>
+                    <a href="#">Features</a>
+                    <a href="#">Supported System Requirements</a>
+                    <a href="#">Downloads</a>
+                    <a href="#">Release Notes</a>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-heading">Community</p>
+                    <a href="#">Events</a>
+                    <a href="#">Meetups</a>
+                    <a href="#">Conferences</a>
+                    <a href="#">Hackathons</a>
+                    <a href="#">Jobs</a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
